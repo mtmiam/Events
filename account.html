@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - RedStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="https://www.transparentpng.com/thumb/target/transparent-picture-target-32.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <!-- <li><a href="products.html">Products</a></li> -->
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <!-- <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a> -->
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+
+        </div>
+    </div>
+
+    <!-- --------------------- account page -----------------  -->
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/image1.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                        </div>
+
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username" id="username">
+                            <input type="passowrd" placeholder="Passowrd" id="password">
+                            <button type="submit" class="btn" id="login-btn">Login</button>
+                            <a href="">Forgot passowrd</a>
+                        </form>
+
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username" id="username">
+                            <input type="email" placeholder="Email">
+                            <input type="passowrd" placeholder="Passowrd" id="password">
+                            <button type="submit" class="btn" id="create-account-btn">Register</button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- ------------------ footer ----------------  -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download our App</h3>
+                <p>Download App for Android ands ios mobile phone.</p>
+                <div class="app-logo">
+                    <a href="https://play.google.com/store/games?utm_source=emea_Med&utm_medium=hasem&utm_content=Sep2020&utm_campaign=Evergreen&pcampaignid=MKT-EDR-emea-eg-1001280-Med-hasem-py-Evergreen-Sep2020-Text_Search_BKWS%7CONSEM_kwid_43700009235293910&gclid=Cj0KCQjwhLKUBhDiARIsAMaTLnE-BiuksFkBwXXUFOyNgWREar5UAmCzefCGfmBJFzcYcT4oTzw1S0YaAuBZEALw_wcB&gclsrc=aw.ds"> <img src="images/play-store.png"></a>
+                   <a href="https://www.apple.com/eg/app-store/"><img src="images/app-store.png"></a>
+                    
+                </div> 
+            </div>
+            <div class="footer-col-2">
+                <img src="https://www.transparentpng.com/thumb/target/transparent-picture-target-32.png">
+                <p>To have peace there must be strife; both are part of the structure of the world and requirements.</p>
+            </div>
+            <!-- <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="https://egypt.alcoupon.com/en/discount-codes/amazon-egypt-souq"  style="color: #8a8a8a;">Coupons</a>  </li>
+                    <li><a href="https://aws.amazon.com/blogs/"  style="color: #8a8a8a;">Blog Post</a></li>
+                    <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7"  style="color: #8a8a8a;">Return Policy</a></li>
+                    <li><a href="https://selfedev.com/noon-affiliate/"  style="color: #8a8a8a;">Affiliate</a>Join </li>
+                </ul>
+            </div>   -->
+            <div class="footer-col-4">
+                <h3>Follow us</h3>
+                <ul>                  
+                    <li><a href="https://www.facebook.com/"  style="color: #8a8a8a;">Facebook</a>  </li>
+                    <li><a href="https://twitter.com/home" style="color: #8a8a8a;">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/" style="color: #8a8a8a;">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/" style="color: #8a8a8a;">Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr> 
+        <p class="copyright"> Copytight 2022 - Our Team</p>
+    </div>
+</div>
+
+    <!-- ------------ js for toggle menu -----------  -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <!-- -----------------js for the toggle form ---------------  -->
+
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
